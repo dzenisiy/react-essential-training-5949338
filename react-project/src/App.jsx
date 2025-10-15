@@ -13,14 +13,26 @@ function Header({name, year}) {
   );
 }
 
+const items = [
+  'Shakshukha',
+  'Babaganoush',
+  'Bardak tea',
+];
+
+function Main({dishes}) {
+  return <ul>
+    {dishes.map((dish) => (
+        <li style={{listStyleType: "none"}}>{dish}</li>
+    ))}
+  </ul>;
+}
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (<>
         <Header name="Alex" year={new Date().getFullYear()}/>
-        <main>
-          <h2>some content</h2>
-        </main>
+        <Main dishes={items}/>
       </>
   );
 }
