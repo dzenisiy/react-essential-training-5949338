@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './App.css';
+import chef from './images/chef.jpg';
 
 let lang = 'React';
 let moon = '🌙';
@@ -16,20 +17,23 @@ function Header({name, year}) {
 const items = [
   'Shakshukha',
   'Babaganoush',
-  'Bardak tea',
+  'Bardak chai',
 ];
 
 const dishObjects = items.map((dish, i) => ({
   id: i,
   title: dish,
-}))
+}));
 
 function Main({dishes}) {
-  return <ul>
-    {dishes.map((dish) => (
-        <li key={dish.id} style={{listStyleType: "none"}}>{dish.title}</li>
-    ))}
-  </ul>;
+  return <main>
+    <img src={chef} height={200} alt="photo of chef owner" />
+    <ul>
+      {dishes.map((dish) => (
+          <li key={dish.id} style={{listStyleType: 'none'}}>{dish.title}</li>
+      ))}
+    </ul>
+  </main>;
 }
 
 function App() {
