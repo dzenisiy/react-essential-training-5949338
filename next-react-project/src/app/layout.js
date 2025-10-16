@@ -19,15 +19,20 @@ export const metadata = {
 
 function Header() {
   return (
-      <header>
-        <nav>
-          <div>
-            <Link href="/">Kasprowy Wierch</Link>
-          </div>
-          <div>
-            <Link href="/mountain">Mountain info</Link>
-          </div>
-        </nav>
+      <header class="bg-slate-500 py-4">
+        <div class="container mx-auto px-4">
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/">Kasprowy Wierch</Link>
+            </div>
+            <div>
+              <Link href="/mountain">Mountain info</Link>
+            </div>
+            <div>
+              <Link href="/hotels">Hotels info</Link>
+            </div>
+          </nav>
+        </div>
       </header>
   );
 }
