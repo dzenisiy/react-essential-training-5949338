@@ -1,9 +1,35 @@
 export default function Page() {
   return (
-      <main>
+      <main className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
         <div>
-          <h1>Contact Details</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">Contact
+            Details</h1>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="email"
+                     className="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                  className="border border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 "/>
+            </div>
+            <div>
+              <label htmlFor="message"
+                     className="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message"
+                        name="message"
+                        id="message"
+                        placeholder="Message"
+                        required rows="4"
+                        className="border border-b  border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 "/>
+            </div>
+            <button type="submit" className="text-white bg-blue-600 rounded-md p3">Submit</button>
+          </form>
         </div>
       </main>
-  )
+  );
 }
